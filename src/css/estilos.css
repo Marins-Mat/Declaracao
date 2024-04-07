@@ -1,0 +1,221 @@
+html {
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+    background: linear-gradient(150deg, #000, #9e00ff);
+    background-size: 120%, 120%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.cabecalho .logo {
+    padding: 10px;
+    border-radius: 30%;
+    border: 2px solid #fff;
+    text-decoration: underline;
+    text-align: center;
+    font-family: "raleway", sans-serif;
+    transition: 0.2s;
+}
+
+.cabecalho a:hover .logo {
+    color: red;
+    border-color: red;
+}
+
+.cabecalho .menu li a {
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 30%;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover {
+    color: red;
+    border-color: red;
+}
+
+.declaracao {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 101px);
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.declaracao .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 1px;
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.declaracao .informacoes h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.declaracao .informacoes p {
+    font-family: "raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.declaracao .container-foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.declaracao .container-foto img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.declaracao .container-foto .foto.sombra-interna {
+    background: linear-gradient(to right, #8200fc, #000000, #ff0000);
+    background-size: 180%, 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.promessas {
+    padding: 70px 0;
+}
+
+.promessas .titulo {
+    text-align: center;
+    padding: 60px 0 5px;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.promessas .declaracao-promessa {
+    text-align: center;
+    padding: 5px 0 10px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.promessas .container-promessas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.promessas .promessa {
+    max-width: 450px;
+    max-height: 450px;
+    position: relative;
+}
+
+.promessas .promessa img {
+    height: 100%;
+    width: 100%;
+}
+
+.promessas .promessa h3 {
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.promessas .promessa .informacoes-promessa {
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.promessas .container-promessas .promessa:hover .informacoes-promessa {
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.promessas .btn-mostrar-amor {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.promessas .btn-mostrar-amor:hover{
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.promessas .btn-mostrar-amor.remover{
+    display: none;
+}
+
+.amor {
+    display: none;
+}
+
+.amor h1{
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.amor p{
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.amor.ativo {
+    display: block;
+}
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
